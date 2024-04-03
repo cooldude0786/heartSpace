@@ -11,7 +11,7 @@ require('dotenv').config();
 // const key = '12345678123456781234567812345678'; // Ensure this is a 32-byte key
 const fileEncryptor = new FileEncryption(process.env.KEY);
 
-router.post('/login', async (req, res) => {
+router.post('/signup', async (req, res) => {
     try {
         let { username, password, email } = req.body;
         if (username === undefined || password === undefined) {
