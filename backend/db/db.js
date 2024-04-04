@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoURL = 'mongodb://localhost:27017/heartSpace';
+const mongoURL = 'mongodb+srv://khizarshaikh:Khizar%40spaceheartCluster2922@spaceheartcluster.k4wtt10.mongodb.net/spaceheart';
 const Schema = mongoose.Schema;
 
 
@@ -33,9 +33,9 @@ async function insertUser(userData) {
     try {
         // Destructure userData
         const { name, password, email } = userData;
-        // if(checkemail(email)){
-        //     return {status:false, message: "Email is Already Taken"}
-        // }
+        if(checkemail(email)){
+            return {status:false, message: "Email is Already Taken"}
+        }
         // Create a new user instance
         const newUser = new UserModel({
             name: name,
@@ -58,8 +58,8 @@ async function insertUser(userData) {
 async function checkemail(email) {
     try {
         const found = await UserModel.findOne({ email: email })
-        console.log(found);
-        return { res: !!found, msg: 'Email Already Exists' };
+        // console.log(found,!found,!!found);
+        return { res: !!found,og:found ,msg: 'Email Already Exists' };
     } catch (error) {
         console.error('error at finding email', error)
         return { res: false, msg: error.message }

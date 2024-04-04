@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cooldude0786/heartSpace.git"
+    "url": "git+https://github.com/cooldude0786/heartspace.git"
   },
   "author": "Khizar Shaikh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cooldude0786/heartSpace/issues"
+    "url": "https://github.com/cooldude0786/heartspace/issues"
   },
-  "homepage": "https://github.com/cooldude0786/heartSpace#readme",
+  "homepage": "https://github.com/cooldude0786/heartspace#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
